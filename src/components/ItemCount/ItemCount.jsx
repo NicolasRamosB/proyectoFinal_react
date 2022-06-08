@@ -9,13 +9,12 @@ function ItemCount({stock, initial}) {
       }else{
         alert('Stock superado')
       }
-         
     }
+
     function resta() {
       if (count > initial) {
         setCount(count - 1)
       }
-        
     }
 
   return (
@@ -23,6 +22,7 @@ function ItemCount({stock, initial}) {
         <button onClick={resta}>-</button>
         <span>{count}</span>
         <button onClick={suma}>+</button>
+        <button>Agregar al Carrito</button>
 
     </div>
   )
