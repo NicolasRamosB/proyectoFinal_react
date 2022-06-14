@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { products } from "../../monk"
 import { ItemList } from "../ItemList/ItemList";
+
 export default function ItemListContainer({title, description}) {
 
   const [productos, setProductos] = useState([])
@@ -30,6 +31,8 @@ export default function ItemListContainer({title, description}) {
     <p className="descriptionItem" style={styleItemListContainer}>{description}</p>
     
     <ItemList items={productos} />
+
+    
     </>
   );
 };
