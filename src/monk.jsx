@@ -4,7 +4,7 @@ export const products = [
         img: "../img/ddl.jpg",
         name: "Churros de DDL",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        categories: "Churros x/u",
+        category: "Churros xu",
         price: 100,
         stock: 10
     },
@@ -14,7 +14,7 @@ export const products = [
         img: "../img/choco.jpg",
         name: "Churros de Chocolate",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        categories: "Churros x 6",
+        category: "Churros x 6",
         price: 200,
         stock: 10
 
@@ -25,7 +25,7 @@ export const products = [
         img: "../img/crema.jpg",
         name: "Churros de Crema Pastelera",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        categories: "Churros x 12",
+        category: "Churros x 12",
         price: 150,
         stock: 10
 
@@ -33,3 +33,4 @@ export const products = [
 
 ]
 
+export default products

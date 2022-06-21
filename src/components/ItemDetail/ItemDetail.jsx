@@ -4,7 +4,7 @@ import ItemCount from '../ItemCount/ItemCount'
 export const ItemDetail = ({item}) => {
   return (
     <>
-    <div>
+    <div className=" container d-flex flex-wrap" >
 
     <h1>{item.name}</h1>
         <img src={item.img} alt="Imagen" />
@@ -12,6 +12,7 @@ export const ItemDetail = ({item}) => {
         <p>{item.description}</p>
 
         <ItemCount stock={12} initial={1} />
+        
         
 
     </div>

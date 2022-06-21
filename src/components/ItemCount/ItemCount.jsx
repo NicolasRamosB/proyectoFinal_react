@@ -18,13 +18,20 @@ function ItemCount({stock, initial}) {
     }
 
   return (
+    <>
     <div>
-        <button onClick={resta}>-</button>
-        <span>{count}</span>
-        <button onClick={suma}>+</button>
-        <button>Agregar al Carrito</button>
+      <div className="d-flex card justify-content-center align-items-center flex-row m-2 p-2">
+      <button className="m-1 p-2 btn btn-danger" onClick={resta}>-</button>
+        <span className="m-1" >{count}</span>
+        <button className="m-1 p-2 btn btn-success" onClick={suma}>+</button>
+      </div>
+    
+        <div>
+        <button className="btn btn-primary">Agregar al Carrito</button>
+        </div>
 
     </div>
+    </>
   )
 }
 export default ItemCount
