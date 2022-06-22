@@ -6,15 +6,13 @@ export const ItemDetail = ({item}) => {
     <>
     <div className=" container d-flex flex-wrap" >
 
-    <h1>{item.name}</h1>
+        <h1>{item.name}</h1>
         <img src={item.img} alt="Imagen" />
         <p>${item.price}</p>
         <p>{item.description}</p>
 
         <ItemCount stock={12} initial={1} />
         
-        
-
     </div>
     </>
   )
