@@ -1,7 +1,19 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export const ItemDetail = ({item}) => {
+export const ItemDetail = ({ item }) => {
+
+  const [cant, setCant] = useState(0);
+
+  const onAdd = (cantidad) =>{
+
+    setCant(cantidad);
+    
+  }
+
+
   return (
     <>
     <div className=" container d-flex flex-wrap" >
@@ -11,7 +23,12 @@ export const ItemDetail = ({item}) => {
         <p>${item.price}</p>
         <p>{item.description}</p>
 
-        <ItemCount stock={12} initial={1} />
+        { (cant === 0)
+          ?<ItemCount onAdd={onAdd} stock={12} initial={1} />
+          :<Link to="/cart">Ir al Carrito</Link>
+        }
+        
+        
         
     </div>
     </>
