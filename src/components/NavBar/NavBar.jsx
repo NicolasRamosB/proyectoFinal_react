@@ -1,6 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css"
-import { BsFillBagFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
@@ -27,9 +26,9 @@ export default function NavBar() {
                         <Link to="/category/Pastelera">Pastelera</Link>
                     </li>
 
-                    <CartWidget>
-                        <BsFillBagFill />
-                    </CartWidget>
+                    <CartWidget/>
+                        
+                   
                 </ul>
 
             </nav>
