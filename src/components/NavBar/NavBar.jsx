@@ -22,25 +22,25 @@ export default function NavBar() {
                         <Link className="linkNav" to="/category/Merluza y Milanesas">Merluza</Link>
                     </li>
 
-                    <li>
+                    {/* <li>
                         <Link className="linkNav" to="/category/Picadas">Picadas</Link>
-                    </li>
+                    </li> */}
 
                     <li>
                         <Link className="linkNav" to="/category/Entradas y Frituras">Entradas y Frituras</Link>
                     </li>
 
-                    <li>
+                    {/* <li>
                         <Link  className="linkNav" to="/category/Mariscos">Mariscos</Link>
-                    </li>
+                    </li> */}
 
-                    <li>
+                    {/* <li>
                         <Link  className="linkNav" to="/category/Postre">Postres</Link>
-                    </li>
+                    </li> */}
 
-                    <li>
+                    {/* <li>
                         <Link  className="linkNav" to="/category/Menu Infantil">Menu Infantil</Link>
-                    </li>
+                    </li> */}
 
                     <CartWidget/>
                         
