@@ -1,16 +1,34 @@
 .Navbar{
     display:flex;
     justify-content: flex-end;
-    align-items: center;
+
+    
     width: 100%;
-    height: 50px;
-    background-color:rgb(75, 5, 5);
+    
+    background-color:rgb(146, 3, 3);
 }
 
 .Ul-navbar{
     display:flex;
     justify-content: space-evenly;
-    width: 50%;
-    color:white;
+    align-items: center;
+    width: 100%;
+    
     list-style:none;
+}
+
+.linkNav{
+    text-decoration: none;
+    color:white;
+}
+
+.brand{
+    width: 100%;
+    
+}
+
+.linkBrand{
+    
+    width: 4%;
+    margin-right: 50%;
 }

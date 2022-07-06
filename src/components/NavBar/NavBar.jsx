@@ -10,20 +10,36 @@ export default function NavBar() {
 
                 <ul className="Ul-navbar"  >
 
-                    <li>
-                        <Link to="/" className="text-center">Inicio</Link>
+                    <li className="linkBrand">
+                        <Link to="/" ><img src="https://i.ibb.co/gwpXq3P/iconochichilo1.png" alt="brand" className="brand" /></Link>
                     </li>
 
                     <li>
-                        <Link to="/category/Dulce de Leche">Dulce de Leche</Link>
+                        <Link to="/" className="linkNav text-center">Inicio</Link>
                     </li>
 
                     <li>
-                        <Link to="/category/Chocolate">Chocolate</Link>
+                        <Link className="linkNav" to="/category/Merluza y Milanesas">Merluza</Link>
                     </li>
 
                     <li>
-                        <Link to="/category/Pastelera">Pastelera</Link>
+                        <Link className="linkNav" to="/category/Picadas">Picadas</Link>
+                    </li>
+
+                    <li>
+                        <Link className="linkNav" to="/category/Entradas y Frituras">Entradas y Frituras</Link>
+                    </li>
+
+                    <li>
+                        <Link  className="linkNav" to="/category/Mariscos">Mariscos</Link>
+                    </li>
+
+                    <li>
+                        <Link  className="linkNav" to="/category/Postre">Postres</Link>
+                    </li>
+
+                    <li>
+                        <Link  className="linkNav" to="/category/Menu Infantil">Menu Infantil</Link>
                     </li>
 
                     <CartWidget/>

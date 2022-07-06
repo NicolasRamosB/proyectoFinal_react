@@ -1,7 +1,6 @@
 import  React  from "react";
 import NavBar from './components/NavBar/NavBar';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -12,18 +11,18 @@ import Footer from "./components/Footer/Footer";
 
 function App( id ) {
   return (
-    <div className="App">
+    <div className="App mx-auto">
       <CartProvider>
       <BrowserRouter>
       <NavBar key={id}/>
       <Routes>
         
       <Route path="/" element={
-        <ItemListContainer title="Churros Manolo" description="Las mejores churros de Mar del Plata"/>
+        <ItemListContainer/>
       } />
       
       <Route path="/category/:categoryId" element={
-        <ItemListContainer title="Categoria" />
+        <ItemListContainer/>
       } />
 
       <Route path="/cart" element={
@@ -31,7 +30,7 @@ function App( id ) {
       } />
      
        <Route path="/item/:id" element={
-        <ItemDetailContainer title="Detalle"/>
+        <ItemDetailContainer/>
       } />
       
       </Routes>

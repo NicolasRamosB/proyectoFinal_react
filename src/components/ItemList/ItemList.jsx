@@ -5,13 +5,13 @@ import Item from '../Item/Item'
 export const ItemList = ({items}) => {
   return (
     <>
-    <div className="d-flex flex-row "  >
+    <div className="flex justify-around flex-wrap"  >
         {
             items.map((item) =>( 
             <Item key={item.id} {...item}/>
             ) )
             
-        };
+        }
         
     </div>
     </>

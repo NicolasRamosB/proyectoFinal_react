@@ -19,15 +19,15 @@ function ItemCount({ stock, initial, onAdd }) {
 
   return (
     <>
-      <div>
-        <div className="d-flex card justify-content-center align-items-center flex-row m-2 p-2">
-          <button className="m-1 p-2 btn btn-danger" onClick={resta}>-</button>
+      <div className="container mt-5">
+        <div className="flex justify-around py-2 border-2">
+          <button className="text-2xl font-bold bg-red-500 text-white py-1 px-2 rounded-md" onClick={resta}>-</button>
           <span className="m-1" >{count}</span>
-          <button className="m-1 p-2 btn btn-success" onClick={suma}>+</button>
+          <button className="text-2xl font-bold bg-green-500 text-white py-1 px-2 rounded-md" onClick={suma}>+</button>
         </div>
 
         <div>
-          <button onClick={() => onAdd(count)} className="btn btn-primary">Agregar al Carrito</button>
+          <button onClick={() => onAdd(count)} className="mt-3 bg-blue-500 py-2 px-8 rounded-md font-bold text-white">Agregar al Carrito</button>
         </div>
 
       </div>

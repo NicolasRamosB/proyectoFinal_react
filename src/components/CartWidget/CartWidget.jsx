@@ -15,8 +15,11 @@ const CartWidget = () => {
             <div >
                 <Link to='/cart'>
                     <div className="cartQuant">
-                        <BsFillBagFill />
-                        { getQuantity() }
+                        <BsFillBagFill className="cartWidget"/>
+                        {
+                          (getQuantity() > 0) && <span className="countWidget">{ getQuantity() }</span>
+                        }
+                        
                     </div>
                 </Link>
             </div>

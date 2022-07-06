@@ -9,42 +9,53 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <>
-        <div>
+        <div >
 
           <h1 className="text-center">El carrito esta vacio</h1>
-          <Link to="/" className="buttonDetail btn btn-warning btn-lg" >
+          <div className="" >
+          <Link to="/" className="bg-yellow-500 py-2 px-8 rounded-md font-bold text-white mt-5" >
             Volver al Inicio
           </Link>
 
+          </div>
+          
         </div>
       </>
     )
   }
 
   return (
-    <div key={cart.id}>
-      {
-        cart.map((item) => (
-          <div className="container card justify-content-center">
-            <h1 className="itemName text-center">{item.name}</h1>
-            <img className="itemImg container" src={item.img} alt="Imagen" />
-            <p className="itemPrice text-center" >${item.price}</p>
+    <>
+      <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap" key={cart.id}>
+        {
+          cart.map((item) => (
+            <div className="bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+              <div className="mb-5 py-3 text-center">
+                <h1 className="text-3xl text-gray-900 mt-2 mb-4 font-medium title-font">{item.name}</h1>
+                
+                <p className="mt-4 text-green-700 text-md font-bold" >${item.price}</p>
 
-            <button onClick={() => { removeItem(item.id) }} className="buttonDetail btn btn-danger btn-lg">X</button>
-
-            <p>Cantidad: {item.qty}</p>
-          </div>
-        ))
+                <button onClick={() => { removeItem(item.id) }} className="bg-red-500 py-2 px-8 rounded-md font-bold text-white mt-5">X</button>
+                <p>Cantidad: {item.qty}</p>
+              </div>
 
 
-      };
+            </div>
+          ))
 
-      <p className="total">Total de la compra: ${totalCost()}</p>
 
-      <button onClick={clearCart} className="buttonDetail btn btn-danger btn-lg">Vaciar Carrito</button>
+        }
 
-      <button className="buttonDetail btn btn-success btn-lg">Comprar</button>
-    </div>
+      </div>
+
+      <div>
+        <p className="total">Total de la compra: ${totalCost()}</p>
+
+        <button onClick={clearCart} className="bg-red-500 py-2 px-8 rounded-md font-bold text-white mt-5">Vaciar Carrito</button>
+
+        <button className="bg-green-500 py-2 px-8 rounded-md font-bold text-white mt-5">Comprar</button>
+      </div>
+    </>
   )
 }
 

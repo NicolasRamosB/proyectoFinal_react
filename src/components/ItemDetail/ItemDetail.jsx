@@ -13,25 +13,37 @@ export const ItemDetail = ({ item, stock }) => {
   const onAdd = (quantity) => {
     setCant(quantity);
 
-    addToCart( item, quantity );
+    addToCart(item, quantity);
   }
 
 
   return (
     <>
-      <div className=" container d-flex flex-wrap" >
+      <div className=" container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap" >
 
-        <h1>{item.name}</h1>
-        <img src={item.img} alt="Imagen" />
-        <p>${item.price}</p>
-        <p>{item.description}</p>
+        <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+          <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+            <img width="600" src={item.img} alt={item.name} />
+          </div>
+        </div>
+        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <h3 className="text-3xl text-gray-900 mt-2 mb-4 font-medium title-font">
+            {item.name}
+          </h3>
 
-        {(cant === 0)
+          <p className="mt-5 mb-3 text-xs text-gray-500">{item.description}</p>
+          <p className="mt-4 text-green-700 text-md font-bold">$ {item.price}</p>
+
+          {(cant === 0)
           ? <ItemCount onAdd={onAdd} stock={12} initial={1} />
-          : <Link to="/cart">Ir al Carrito</Link>
+          : <Link className="bg-green-500 py-2 px-8 rounded-md font-bold text-white" to="/cart">Ir al Carrito</Link>
         }
 
+
+        </div>
+
        
+
 
       </div>
 
