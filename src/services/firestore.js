@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, getDoc, doc, query, where, collection} from "firebase/firestore"
+import {getFirestore, getDocs, getDoc, doc, query, where, addDoc, collection } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDOAI2NiTkae2LtXMmVO7UzTKpkO3sAQIM",
@@ -54,12 +54,22 @@ export async function getItemOfCategory(categoryId){
 
 
 export async function getAnItem(id){
-  // const productCollection = collection(appFirestore, "products");
+  
   const docref = doc(appFirestore, "products", id )
   const docSnapshot = await getDoc(docref);
   return{
-    ...docSnapshot.data()
+    id:docSnapshot.id, ...docSnapshot.data()
   }
+}
+
+export async function createBuyOrder(dataOrder){
+  const ordersCollection = collection(appFirestore, "orders");
+  
+  const orderCreated = await addDoc (ordersCollection, dataOrder)
+  console.log("Su compra ha sido completada", orderCreated);
+
+  alert("Su compra ha sido completada", orderCreated);
+
 }
 
 

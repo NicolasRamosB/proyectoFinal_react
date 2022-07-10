@@ -12,7 +12,6 @@ export const ItemDetail = ({ item, stock }) => {
 
   const onAdd = (quantity) => {
     setCant(quantity);
-
     addToCart(item, quantity);
   }
 
@@ -42,7 +41,6 @@ export const ItemDetail = ({ item, stock }) => {
 
         </div>
 
-       
 
 
       </div>

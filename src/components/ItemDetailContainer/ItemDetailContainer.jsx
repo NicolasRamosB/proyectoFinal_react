@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { getAnItem } from '../../services/firestore';
+import { getAnItem} from '../../services/firestore';
 export default function ItemDetailContainer({ title }) {
 
   const [producto, setProducto] = useState({})
@@ -22,7 +22,7 @@ export default function ItemDetailContainer({ title }) {
       <h1 className="bg-danger">{title}</h1>
       <ItemDetail item={producto} />
     </div>
-
+ 
   </>
   );
 };

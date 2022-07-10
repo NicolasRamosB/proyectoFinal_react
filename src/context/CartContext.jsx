@@ -1,18 +1,15 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 // 1- Creo el Contexto para exportarlo
 export const CartContext = createContext();
 
 
 // 2- Creo la funcion
-export const CartProvider = ({ children, id }) => {
+export const CartProvider = ({ children }) => {
 
   // Estado
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
 
   // Añadir al carrito.
@@ -21,19 +18,18 @@ export const CartProvider = ({ children, id }) => {
     if (isInCart(item.id)) {
       let index = cart.findIndex(el => el.id === item.id);
       let product = cart[index];
-      product.qty = product.qty+ qty;
+      product.qty = product.qty + qty;
 
       const newCart = [...cart];
       newCart.splice(index, 1, product);
 
       setCart([...newCart]);
 
-      console.log(cart);
-
+      console.log(newCart);
     } else {
 
       setCart([...cart, { ...item, qty }]);
-
+     
     }
 
   }

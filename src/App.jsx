@@ -9,7 +9,7 @@ import { CartProvider } from "./context/CartContext";
 import Footer from "./components/Footer/Footer";
 
 
-function App( id ) {
+function App( id, item ) {
   return (
     <div className="App mx-auto">
       <CartProvider>
@@ -25,7 +25,7 @@ function App( id ) {
         <ItemListContainer/>
       } />
 
-      <Route path="/cart" element={
+      <Route  path="/cart"  element={
         <Cart/>
       } />
      
