@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, getDoc, doc, query, where, addDoc, collection } from "firebase/firestore"
+import {getFirestore, getDocs, getDoc, doc, query, where, addDoc, Timestamp, collection } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDOAI2NiTkae2LtXMmVO7UzTKpkO3sAQIM",
@@ -64,12 +64,15 @@ export async function getAnItem(id){
 
 export async function createBuyOrder(dataOrder){
   const ordersCollection = collection(appFirestore, "orders");
-  
-  const orderCreated = await addDoc (ordersCollection, dataOrder)
-  console.log("Su compra ha sido completada", orderCreated);
+  const dateTime = Timestamp.now();
 
-  alert("Su compra ha sido completada", orderCreated);
+  const dataOrderDate = {
+    ...dataOrder,
+    date: dateTime
+  }
+  const orderCreated = await addDoc (ordersCollection, dataOrderDate)
 
+  return orderCreated
 }
 
 
