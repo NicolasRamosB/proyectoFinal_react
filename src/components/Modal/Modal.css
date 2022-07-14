@@ -1,0 +1,41 @@
+.modal{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    padding: 40px;
+    background:rgba(0,0,0,.5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.containerModal{
+    width:500px;
+    min-height:100px;
+    background:#fff;
+    position:relative;
+    border-radius:5px;
+    box-shadow:rgba(100,100,111,0.2)0px 7px 29px 0px;
+    padding:20px;
+    
+}
+
+.buttonClose{
+    position:absolute;
+    color: rgb(174, 31, 31);
+    font-weight:bold;
+    
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    transition: .3s ease all;
+    border-radius: 5px;
+
+   
+} .buttonClose:hover{
+    background: rgb(128, 47, 47);
+    color: white;
+}

@@ -1,11 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
-import { Form } from '../Form/Form';
+
+import Modal from '../Modal/Modal';
 
 const Cart = () => {
-  const { cart, removeItem, clearCart, totalCost } = useContext(CartContext);
 
+  const [modalForm, setModalForm] = useState(false);
+
+  const { cart, removeItem, clearCart, totalCost } = useContext(CartContext);
+  
   if (cart.length === 0) {
     return (
       <>
@@ -60,8 +64,11 @@ const Cart = () => {
         <p className="total">Total de la compra: ${totalCost()}</p>
 
         <button onClick={clearCart} className="bg-red-500 py-2 px-8 rounded-md font-bold text-white mt-5">Vaciar Carrito</button>
+        <button onClick={() => setModalForm(!modalForm)} className="bg-green-500 py-2 px-8 rounded-md font-bold text-white mt-5">Comprar</button>
 
-        <Form/>
+        <Modal modalForm={modalForm} setModalForm={setModalForm} />
+        
+        
        
       </div>
     </>
