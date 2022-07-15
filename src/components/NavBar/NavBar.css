@@ -20,15 +20,20 @@
 .linkNav{
     text-decoration: none;
     color:white;
+    transition: all .5s;
+    
+}
+
+.linkNav:hover{
+    background:rgb(186, 0, 0)
 }
 
 .brand{
-    width: 100%;
-    
+    width: 100px;
 }
 
 .linkBrand{
     
-    width: 4%;
     margin-right: 50%;
 }
+

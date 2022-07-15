@@ -14,7 +14,7 @@ const CartWidget = () => {
         <>
             <div >
                 <Link to='/cart'>
-                    <div className="cartQuant">
+                    <div className=" flex cartQuant">
                         <BsFillBagFill className="cartWidget"/>
                         {
                           (getQuantity() > 0) && <span className="countWidget">{ getQuantity() }</span>

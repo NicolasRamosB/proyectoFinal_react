@@ -18,7 +18,7 @@ export default function ItemDetailContainer({ title }) {
 
 
   return (<>
-    <div className="text-center container mx-auto mt-5 h-screen" >
+    <div className="text-center" >
       <h1 className="bg-danger">{title}</h1>
       <ItemDetail item={producto} />
     </div>

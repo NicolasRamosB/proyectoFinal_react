@@ -1,8 +1,12 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css"
+import { Dropdown } from "./Dropdown/Dropdown";
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
 export default function NavBar() {
+
+    const [dropdown, setDropdown] = useState(false)
 
     return (
         <>
@@ -18,36 +22,20 @@ export default function NavBar() {
                         <Link to="/" className="linkNav text-center">Inicio</Link>
                     </li>
 
-                    <li>
-                        <Link className="linkNav" to="/category/Merluza y Milanesas">Merluza</Link>
+                    <li  onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
+                        <Link to="/"  className="linkNav text-center">Platos</Link>
+                        { dropdown && <Dropdown/>}
                     </li>
 
-                    <li>
-                        <Link className="linkNav" to="/category/Picada Chichilo">Picadas</Link>
-                    </li>
 
-                    <li>
-                        <Link className="linkNav" to="/category/Entradas y Frituras">Entradas y Frituras</Link>
-                    </li>
-
-                    <li>
-                        <Link  className="linkNav" to="/category/Mariscos">Mariscos</Link>
-                    </li>
-
-                    <li>
-                        <Link  className="linkNav" to="/category/Postre">Postres</Link>
-                    </li>
-
-                    <li>
-                        <Link  className="linkNav" to="/category/Menu Infantil">Menu Infantil</Link>
-                    </li>
-
+                    
+                
                     <CartWidget />
                         
-                   
                 </ul>
 
             </nav>
+            
         </>
     )
 }

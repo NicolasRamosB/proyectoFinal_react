@@ -1,0 +1,18 @@
+.countWidget{
+    color: rgb(255, 252, 252);
+    margin: 5px;
+    padding-right: 5px ;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    background: rgb(255, 115, 115);
+    border-radius: 10px;
+}
+
+.cartWidget{
+    color: rgb(255, 255, 255);
+
+}
+
+.cartQuant{
+    align-items: center;
+}
