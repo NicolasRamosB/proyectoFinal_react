@@ -10,7 +10,7 @@
 
 .Ul-navbar{
     display:flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     align-items: center;
     width: 100%;
     
@@ -18,18 +18,29 @@
 }
 
 .linkNav{
+    
     text-decoration: none;
     color:white;
-    transition: all .5s;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    
+    font-size: 110%;
+
+    transition:all .5s ease;
+    
+    border: 2px solid rgba(0, 0, 0, 0.411);
+    text-decoration: none;
+   
     
 }
 
 .linkNav:hover{
-    background:rgb(186, 0, 0)
+    background:rgb(102, 2, 2);
+    padding: 0rem  3.4rem 0rem 3.4rem;
 }
 
 .brand{
     width: 100px;
+    
 }
 
 .linkBrand{

@@ -14,6 +14,8 @@ export default function NavBar() {
 
                 <ul className="Ul-navbar"  >
 
+                    
+
                     <li className="linkBrand">
                         <Link to="/" ><img src="https://i.ibb.co/gwpXq3P/iconochichilo1.png" alt="brand" className="brand" /></Link>
                     </li>
@@ -23,7 +25,7 @@ export default function NavBar() {
                     </li>
 
                     <li  onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
-                        <Link to="/"  className="linkNav text-center">Platos</Link>
+                        <Link to="/"  className="linkNav text-center ">Platos</Link>
                         { dropdown && <Dropdown/>}
                     </li>
 
