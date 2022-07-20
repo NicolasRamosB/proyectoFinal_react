@@ -3,7 +3,7 @@
 import { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import './CartWidget.css'
+import './cartWidget.css'
 import { BsFillBagFill } from "react-icons/bs";
 
 

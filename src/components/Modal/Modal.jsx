@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Form } from "../Form/Form";
-import './Modal.css';
+import './modal.css';
 
 
 const Modal = ({modalForm, setModalForm}) => {

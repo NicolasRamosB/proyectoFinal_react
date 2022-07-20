@@ -1,5 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget";
-import "./NavBar.css"
+import "./navBar.css"
 import { Dropdown } from "./Dropdown/Dropdown";
 import { Link } from 'react-router-dom';
 import { useState } from "react";
