@@ -1,0 +1,20 @@
+.search-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0 20px 0;
+    
+    width: 100%;
+    background:rgba(134, 109, 109, 0.356) ;
+}
+.search-label{
+    font-size:150%;
+}
+
+.search-input {
+    padding: 5px;
+    margin:20px;
+    width: 30%;
+    border: 1px solid rgb(134, 109, 109);
+}

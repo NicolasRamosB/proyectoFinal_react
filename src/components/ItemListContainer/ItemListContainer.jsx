@@ -10,7 +10,8 @@ export default function ItemListContainer({ title, description }) {
 
   const [productos, setProductos] = useState([])
 
-  const {categoryId} = useParams();
+  const [loading, setLoading] = useState(true);
+  const { categoryId } = useParams();
 
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function ItemListContainer({ title, description }) {
         .then((res) => {
 
           setProductos(res);
+          setLoading(false);
 
         })
         .catch((error) => {
@@ -35,6 +37,7 @@ export default function ItemListContainer({ title, description }) {
         .then((res) => {
 
           setProductos(res);
+          setLoading(false);
 
         })
 
@@ -62,15 +65,15 @@ export default function ItemListContainer({ title, description }) {
 
 
       {
-        productos
-          ? <ItemList items={productos} />
-          : (
-            <div className="mx-auto h-96 flex justify-around">
-              <div className="flex-1 flex justify-center items-center">
-                <RotateLoader className="mx-auto align-middle" color={"rgb(217, 4, 121)"} size={20} />
-              </div>
+        loading
+          ? <div className="mx-auto h-96 flex justify-around">
+            <div className="flex-1 flex justify-center items-center">
+              <RotateLoader className="mx-auto align-middle" color={"rgb(217, 4, 121)"} size={20} />
             </div>
-          )
+          </div>
+
+          : <ItemList items={productos} />
+
       }
     </div>
 

@@ -13,7 +13,6 @@
     justify-content:space-evenly;
     align-items: center;
     width: 100%;
-    
     list-style:none;
 }
 
@@ -22,20 +21,15 @@
     text-decoration: none;
     color:white;
     padding: 0.5rem 2rem 0.5rem 2rem;
-    
     font-size: 110%;
-
     transition:all .5s ease;
-    
     border: 2px solid rgba(0, 0, 0, 0.411);
     text-decoration: none;
-   
-    
 }
 
 .linkNav:hover{
     background:rgb(102, 2, 2);
-    padding: 0rem  3.4rem 0rem 3.4rem;
+    
 }
 
 .brand{
