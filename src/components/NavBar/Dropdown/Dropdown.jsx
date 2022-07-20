@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './dropdown.css'
+import './Dropdown.css'
 
 export const Dropdown = () => {
 

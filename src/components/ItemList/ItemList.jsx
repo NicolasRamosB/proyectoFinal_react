@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Item from '../Item/Item'
-import './itemList.css'
+import './ItemList.css'
 
 
 export const ItemList = ({ items }) => {
