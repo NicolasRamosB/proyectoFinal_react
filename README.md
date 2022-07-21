@@ -3,6 +3,11 @@
 
 Este es un proyecto realizado para el curso de React JS. Se trata de un ecommerce en el que podrás navegar por distintas categorías, buscar por producto, entrar al detalle del producto, añadir, eliminar, vaciar los mismos. Concretar y adquirir tu orden de compra de los productos que has seleccionado.
 
+## 🔗 Deploy
+
+* [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://chichilo-mardelplata.vercel.app/)
+* "https://chichilo-mardelplata.vercel.app/"
+
 ---
 ## Run Locally
 
@@ -37,6 +42,7 @@ Este es un proyecto realizado para el curso de React JS. Se trata de un ecommerc
 * [![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 * [![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.javascript.com/)
 * [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://es.reactjs.org/)
+* [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://es.reactjs.org/)
 
 ---
 ## ⚡ React Dependencias
@@ -127,6 +133,10 @@ Cada Orden tiene las siguientes características:
 
 * [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nicolas-ramos-161611219/)
 * [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NicolasRamosB)
+
+---
+
+![Logo](./chichilo.gif)
 
 ---
 
