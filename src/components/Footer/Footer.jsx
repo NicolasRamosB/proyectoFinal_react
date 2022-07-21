@@ -1,11 +1,13 @@
 import "./Footer.css"
 
-export default function Footer (){
-    return(
-    <>
-        <footer className="footer">
-            <h1 className="title-footer"> Titulo del footer </h1>
-        </footer>
+export default function Footer() {
+    return (
+        <>
+            <footer className="footer">
+                <div>
+                    <h1 className="title-footer text-center"> Chichilo</h1>
+                </div>
+            </footer>
         </>
 
     )

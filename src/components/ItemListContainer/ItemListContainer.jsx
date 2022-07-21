@@ -1,15 +1,15 @@
 
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import { ItemList } from "../ItemList/ItemList";
 import RotateLoader from 'react-spinners/RotateLoader'
-import { getItemOfCategory, getItems } from '../../services/firestore';
-import { useParams } from "react-router-dom";
 
-export default function ItemListContainer({ title, description }) {
+import { getItemOfCategory, getItems } from '../../services/firestore';
+
+export default function ItemListContainer() {
 
   const [productos, setProductos] = useState([])
-
   const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
@@ -18,29 +18,21 @@ export default function ItemListContainer({ title, description }) {
 
     if (categoryId) {
       getItemOfCategory(categoryId)
-
         .then((res) => {
-
           setProductos(res);
           setLoading(false);
-
         })
         .catch((error) => {
-
           console.log(error);
-
         });
+
     } else {
 
       getItems()
-
         .then((res) => {
-
           setProductos(res);
           setLoading(false);
-
         })
-
         .catch((error) => {
           console.log(error);
         });
@@ -53,13 +45,13 @@ export default function ItemListContainer({ title, description }) {
     fontSize: '40px',
   };
 
+
   return (<>
 
     <div className="text-center container mx-auto mt-5">
 
       <header>
         <h1 className="titleItem text-center" style={styleItemListContainer}>Chichilo</h1>
-
         <p className="descriptionItem text-center" style={styleItemListContainer}></p>
       </header>
 
@@ -73,14 +65,10 @@ export default function ItemListContainer({ title, description }) {
           </div>
 
           : <ItemList items={productos} />
-
       }
+
     </div>
 
   </>
   );
 };
-// const itemCategory = products.filter(categories => {
-//   return categories.category === categoryId
-// });
-// resolve(itemCategory);

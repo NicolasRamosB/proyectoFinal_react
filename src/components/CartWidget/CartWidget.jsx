@@ -1,8 +1,9 @@
 
-
 import { CartContext } from '../../context/CartContext'
+
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+
 import './CartWidget.css'
 import { BsFillBagFill } from "react-icons/bs";
 
@@ -15,11 +16,11 @@ const CartWidget = () => {
             <div >
                 <Link to='/cart'>
                     <div className=" flex cartQuant">
-                        <BsFillBagFill className="cartWidget"/>
+                        <BsFillBagFill className="cartWidget" />
                         {
-                          (getQuantity() > 0) && <span className="countWidget">{ getQuantity() }</span>
+                            (getQuantity() > 0) &&
+                            <span className="countWidget">{getQuantity()}</span>
                         }
-                        
                     </div>
                 </Link>
             </div>

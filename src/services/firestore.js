@@ -1,6 +1,16 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, getDoc, doc, query, where, addDoc, Timestamp, collection } from "firebase/firestore"
+import {
+  getFirestore,
+  getDocs,
+  getDoc,
+  doc,
+  query, 
+  where,
+  addDoc,
+  Timestamp,
+  collection 
+} from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDOAI2NiTkae2LtXMmVO7UzTKpkO3sAQIM",
@@ -12,16 +22,14 @@ const firebaseConfig = {
 };
 
 
-// Initialize Firebase
+
 const appFirebase = initializeApp(firebaseConfig);
 const appFirestore = getFirestore(appFirebase);
  
 export async function  getItems(){
     const productCollection = collection(appFirestore, "products");
-    
     const productsSnapshot = await getDocs(productCollection);
-    
-
+  
     let respuesta = productsSnapshot.docs.map(doc =>{
       return{
         ...doc.data(),
@@ -29,17 +37,13 @@ export async function  getItems(){
       }
     } );
 
-    
-
     return respuesta;
 }
 
 export async function getItemOfCategory(categoryId){
 
   const productCollection = collection(appFirestore, "products");
-
   const q = query(productCollection, (where("category", "==", categoryId)));
-
   const productsSnapshot = await getDocs(q);
 
   let respuesta = productsSnapshot.docs.map( doc => {
@@ -57,6 +61,7 @@ export async function getAnItem(id){
   
   const docref = doc(appFirestore, "products", id )
   const docSnapshot = await getDoc(docref);
+
   return{
     id:docSnapshot.id, ...docSnapshot.data()
   }
@@ -70,6 +75,7 @@ export async function createBuyOrder(dataOrder){
     ...dataOrder,
     date: dateTime
   }
+
   const orderCreated = await addDoc (ordersCollection, dataOrderDate)
 
   return orderCreated
